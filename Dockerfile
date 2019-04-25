@@ -7,7 +7,7 @@ RUN mkdir -p /app && \
 # Set the working directory
 WORKDIR /app
 
-# Install Vue Global packages via yarn
+# Install Vue CLI and CLI Service Global via yarn
 RUN su node && \
   yarn global add @vue/cli @vue/cli-service-global
 
