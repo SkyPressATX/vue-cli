@@ -1,4 +1,4 @@
-FROM node:current-stretch
+FROM node:12-alpine
 
 # Create working directory
 RUN mkdir -p /app && \
