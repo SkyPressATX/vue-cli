@@ -10,3 +10,4 @@ RUN yarn global add @vue/cli @vue/cli-service-global
 USER node
 
 # Expose Ports
+EXPOSE 8080
