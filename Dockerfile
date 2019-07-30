@@ -1,15 +1,12 @@
-FROM node:12-alpine
+FROM skypress/npx:latest
 
-# Create working directory
-RUN mkdir -p /app && \
-  chown node:node /app
+# Switch to root user
+USER root
 
-# Set the working directory
-WORKDIR /app
-
-# Install Vue CLI and CLI Service Global via yarn
-RUN su node && \
-  yarn global add @vue/cli @vue/cli-service-global
+# Install Vue CLI and Service
+RUN yarn global add @vue/cli @vue/cli-service-global
 
 # Use the "node" user
 USER node
+
+# Expose Ports
